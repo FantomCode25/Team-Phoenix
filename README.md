@@ -10,3 +10,8 @@
 - folder name - device_code
 - file name - device.cpp
 - A code which is used for collecting data from the sensors and calculate the required features
+
+4th commit - 2:00 am
+- folder name - Google_colab , lib 
+- file name - dataset_code.py , main.dart 
+- Code to complete the traained model and application for main.dart which was cleaned with errors

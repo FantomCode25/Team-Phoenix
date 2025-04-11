@@ -57,3 +57,29 @@ print("Model saved as 'rf_hemoglobin_model.pkl'")
 from google.colab import files
 files.download('hemoglobin_dataset_100.csv')
 files.download('rf_hemoglobin_model.pkl')
+import tensorflow as tf
+
+rf_model_loaded = joblib.load('rf_hemoglobin_model.pkl')
+
+def rf_to_tf_model(rf_model, feature_count):
+    model = tf.keras.Sequential([
+        tf.keras.layers.Dense(100, input_dim=feature_count, activation='relu'),
+        tf.keras.layers.Dense(50, activation='relu'),
+        tf.keras.layers.Dense(1)  # Output Hb
+    ])
+    # Train with dummy data to mimic RF (simplified)
+    X_train_array = X_train.values
+    model.compile(optimizer='adam', loss='mse')
+    model.fit(X_train_array, y_train, epochs=50, verbose=0)
+    return model
+
+# Convert
+tf_model = rf_to_tf_model(rf_model, X_train.shape[1])
+converter = tf.lite.TFLiteConverter.from_keras_model(tf_model)
+tflite_model = converter.convert()
+
+# Save TFLite model
+with open('rf_hemoglobin_model.tflite', 'wb') as f:
+    f.write(tflite_model)
+print("TFLite model saved as 'rf_hemoglobin_model.tflite'")
+files.download('rf_hemoglobin_model.tflite')
