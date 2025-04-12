@@ -1,0 +1,39 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_blue (0.0.1):
+    - Flutter
+    - flutter_blue/Protos (= 0.0.1)
+  - flutter_blue/Protos (0.0.1):
+    - Flutter
+    - Protobuf (~> 3.11.4)
+  - permission_handler_apple (9.1.1):
+    - Flutter
+  - Protobuf (3.11.4)
+
+DEPENDENCIES:
+  - Flutter (from Flutter)
+  - flutter_blue (from .symlinks/plugins/flutter_blue/ios)
+  - permission_handler_apple (from .symlinks/plugins/permission_handler_apple/ios)
+  - Protobuf (~> 3.11.4)
+
+SPEC REPOS:
+  trunk:
+    - Protobuf
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_blue:
+    :path: ".symlinks/plugins/flutter_blue/ios"
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
+
+SPEC CHECKSUMS:
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_blue: eeb381dc4727a0954dede73515f683865494b370
+  permission_handler_apple: e76247795d700c14ea09e3a2d8855d41ee80a2e6
+  Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
+
+PODFILE CHECKSUM: fd298ea22c87aa3237844e472c46d1466fea0d19
+
+COCOAPODS: 1.16.2
