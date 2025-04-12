@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀 Project Name : Non-Invasive hemoglobin monitoring device with mobile application.
 
 **Team Name:** _Team Phoenix_  
 **Hackathon:** _FantomCode'25 & season 4_  
