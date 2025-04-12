@@ -43,3 +43,9 @@ Tools: e.g., Docker, GitHub Actions, Figma
 - folder name - Google_colab , lib 
 - file name - dataset_code.py , main.dart 
 - Code to complete the traained model and application for main.dart which was cleaned with errors
+
+5th commit - 7:00 am 
+- folder name - device_code , lib
+- file name - device.cpp , main.dart 
+- A code which is used for collecting data from the sensors and calculate the required features and application for main.dart which was cleaned with errors
+
